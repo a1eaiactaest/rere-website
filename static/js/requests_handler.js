@@ -19,8 +19,7 @@ export function fetch_data(station){
 }
 
 export function init_data(station){
- var select = document.getElementById("amount");
- $.get('/init/' + station, function(data){
+ $.get('/init/' + station + '/' + '100', function(data){
    for (const value_set of data){
      write_to_table(value_set);
      recent = value_set;
