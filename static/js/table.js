@@ -1,6 +1,10 @@
 import {parse_unix_time} from './utils.js';
 export function write_to_table(values_arr){
   let table = document.getElementById("datatable");
+  let row_count = table.rows.length;
+  if (row_count >= 100){
+    table.deleteRow(row_count-1);
+  }
   let row = table.insertRow(1);
   let time_cell = row.insertCell(); time_cell.innerHTML = parse_unix_time(values_arr[0]);
   let id_cell = row.insertCell(); id_cell.innerHTML = values_arr[1];

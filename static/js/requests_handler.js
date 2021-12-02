@@ -20,8 +20,7 @@ export function fetch_data(station){
 
 export function init_data(station){
  var select = document.getElementById("amount");
- var rowAmount = select.options[select.selectedIndex].value;
- $.get('/init/' + station + '/' + rowAmount, function(data){
+ $.get('/init/' + station, function(data){
    for (const value_set of data){
      write_to_table(value_set);
      recent = value_set;
