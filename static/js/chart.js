@@ -49,7 +49,7 @@ const config = {
   data: data,
   options: {
     normalized: true,
-    animation: false,
+    animation: true,
     plugins: {
       decimation: decimation,
     },
@@ -59,6 +59,7 @@ const config = {
         grace: '5'
       },
       xAxes: {
+        display: true,
         ticks: {
           autoSkip: true,
           maxTicksLimit: 10
@@ -94,6 +95,8 @@ function get_initial_data(station){
 
 function add_data(chart, label, data){
   chart.data.labels.push(label);
+  chart.data.labels.splice(0,1);
+  chart.data.datasets[0].data.splice(0,1);
   chart.data.datasets.forEach((dataset) => {
     dataset.data.push(data);
   });
