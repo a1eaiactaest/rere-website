@@ -6,7 +6,6 @@ if (location.pathname == '/'){
   var station = document.getElementById('station').innerHTML;
 }
 
-var NUM_POINTS;
 var station = document.getElementById('station').innerHTML;
 var arxiv_data = get_initial_data(station);
 
@@ -20,6 +19,7 @@ const decimation = {
 };
 
 
+/*
 const actions = [
   {
     name: 'lttb',
@@ -31,6 +31,7 @@ const actions = [
     }
   }
 ];
+*/
 
 const data = {
   labels: labels,
@@ -50,9 +51,10 @@ const config = {
   options: {
     normalized: true,
     animation: true,
+    /*
     plugins: {
       decimation: decimation,
-    },
+    },*/
     spanGaps: true,
     scales: {
       y: {
@@ -89,14 +91,15 @@ function get_initial_data(station){
       });
     }
   });
-  NUM_POINTS = ret.length;
   return ret;
 }
 
 function add_data(chart, label, data){
   chart.data.labels.push(label);
-  chart.data.labels.splice(0,1);
-  chart.data.datasets[0].data.splice(0,1);
+  if (chart.data.datasets[0].length < 2){
+    chart.data.labels.splice(0,1);
+    chart.data.datasets[0].data.splice(0,1);
+  }
   chart.data.datasets.forEach((dataset) => {
     dataset.data.push(data);
   });
