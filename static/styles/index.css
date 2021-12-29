@@ -2,7 +2,6 @@
 
 body {
   font-family: 'Mukta', sans-serif;
-  height: 100%;
   margin: 0;
 }
 
@@ -78,12 +77,15 @@ th {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
-  /*width: 100%;*/
   text-align: center;
 }
 
 tr:hover {
   background-color: rgba(126, 165, 116, 0.5);
+}
+
+#datatable {
+  margin-bottom: 50px;
 }
 
 
