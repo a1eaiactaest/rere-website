@@ -97,7 +97,7 @@ function get_initial_data(station){
 function add_data(chart, label, data){
   chart.data.labels.push(label);
   console.log(chart.data.datasets[0].data.length);
-  if (chart.data.datasets[0].data.length <= 100){
+  if (chart.data.datasets[0].data.length >= 100){
     // remove
     chart.data.labels.splice(0,1);
     chart.data.datasets[0].data.splice(0,1);
