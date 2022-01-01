@@ -18,12 +18,9 @@
       <div class="menu">
         <ul>
           <li style="display:block"><a href='/stations/0' class="menu">All Stations</a></li>
-          <img class="menu-separator" src="/static/img/leaf-solid.svg"/>
-          <li style="display:block"><a href='/stations/3' class="menu">Station 3</a></li>
-          <img class="menu-separator" src="/static/img/leaf-solid.svg"/>
-          <li style="display:block"><a href='/stations/5' class="menu">Station 5</a></li>
-          <img class="menu-separator" src="/static/img/leaf-solid.svg"/>
-          <li style="display:block"><a href='/stations/11' class="menu">Station 11</a></li>
+          {% for station in stations -%}
+            <li style="display:block"><a href='/stations/{{ station }}' class="menu">Station {{ station }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
