@@ -34,7 +34,7 @@ export function parse_unix_time(unix_seconds){
 
   var date = new Date(unix_seconds * 1000);
   var year = date.getFullYear();
-  var month = date.getMonth();
+  var month = date.getMonth() + 1;
   var day = date.getDate();
   var hour = date.getHours();
   var minutes = "0" + date.getMinutes();
