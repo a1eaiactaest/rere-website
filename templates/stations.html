@@ -11,15 +11,17 @@
 <body>
 
   <div class="parallax">
-    <h1 class="home_title"><span id="title">RERE</span></h1>
+    <h1 class="home_title"><span id="title">INDEX</span></h1>
   </div>
   <div class="root">
     <div class="center">
       <div class="menu">
         <ul>
-          <li style="display:block"><a href="/stations" class="menu">Stations</a></li>
-          <li style="display:block"><a href="/info" class="menu">About the RERE</a></li>
-          <li style="display:block"><a href="/learn" class="menu">Learn</a></li>
+          <li style="display:block"><a href='/' class="menu">Home</a></li>
+          <li style="display:block"><a href='/stations/0' class="menu">All Stations</a></li>
+          {% for station in stations -%}
+            <li style="display:block"><a href='/stations/{{ station }}' class="menu">Station {{ station }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
