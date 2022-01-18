@@ -24,6 +24,7 @@ body {
   position: relative;
 }
 
+
 .home_title {
   position: absolute;
   color: white;
@@ -40,6 +41,13 @@ body {
 .root {
   position: relative;
   margin: 8px;
+  text-align: center;
+}
+
+.root-blog {
+  position: relative;
+  margin: 10%;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -104,3 +112,4 @@ a.visited {
 ul {
   padding:0;
 }
+
