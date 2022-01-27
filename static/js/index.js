@@ -10,6 +10,7 @@ console.log(station);
 if (station != 0){
   console.log(document.getElementById("title").innerHTML);
   document.getElementById("title").innerHTML = "Stacja " + station;
+  document.title = "Stacja " + station;
 }
 
 function main(station){
