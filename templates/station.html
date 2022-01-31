@@ -4,16 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RERE</title>
 
-  <!-- External Libs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- Internal Libs -->
 
-  <!-- Main JavaScript file
-  <script type="text/javascript" src="/static/js/index.js"></script>-->
   <script type="module" src="/static/js/index.js"></script>
 
-  <!-- Style -->
   <link rel="stylesheet" type="text/css" href="/static/styles/index.css">
 
 </head>
@@ -29,43 +24,59 @@
       <h1 class="home_title"><span id="title">All Stations</span></h1>
     </div>
   </div>
-  <div class="root">
 
+  <div class="center" style="padding: 0;">
     <a href="/stations" class="menu">Index</a>
       
     <img src="/static/img/envira-brands.svg" class="menu-separator">
 
     <a href="/stations" class="menu">O nas</a>
-
-    <div class="chart-container"> 
-      <canvas id="chart"></canvas>
-    </div>
-
-    <script type="module" src="/static/js/chart.js"></script>
   </div>
 
-    <table id="datatable" class="center"> 
-      <tr style="width: 100%">
-        <th>Data</th>
-        <th>Stacja</th>
-        <th>Ciśnienie</th>
-        <th>gas_res</th>
-        <th>Temp. powietrza</th>
-        <th>Wilg. powietrza</th>
-        <th>Temp. ziemi</th>
-        <th>Wilg. ziemi</th>
-      </tr>
-      <tr>
-        <td id="time"></td>
-        <td id="id"></td>
-        <td id="pres"></td>
-        <td id="gas_res"></td>
-        <td id="a_temp"></td>
-        <td id="a_hum"></td>
-        <td id="gd_temp"></td>
-        <td id="gd_hum"></td>
-      </tr>
-    </table>
+  <div class="root">
 
+    <div class="column left">
+      <span>&#8203;</span>
+    </div>
+
+    <div class="column middle">
+      <div class="chart-container"> 
+        <canvas id="chart"></canvas>
+      </div>
+
+      <script type="module" src="/static/js/chart.js"></script>
+
+      <table id="datatable" class="center"> 
+        <tr style="width: 100%">
+          <th>Data</th>
+          <th>Stacja</th>
+          <th>Ciśnienie</th>
+          <th>gas_res</th>
+          <th>Temp. powietrza</th>
+          <th>Wilg. powietrza</th>
+          <th>Temp. ziemi</th>
+          <th>Wilg. ziemi</th>
+        </tr>
+        <tr>
+          <td id="time"></td>
+          <td id="id"></td>
+          <td id="pres"></td>
+          <td id="gas_res"></td>
+          <td id="a_temp"></td>
+          <td id="a_hum"></td>
+          <td id="gd_temp"></td>
+          <td id="gd_hum"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="column right">
+      <span>&#8203;</span>
+    </div>
+
+
+
+
+    </div>
 </body>
 </html>

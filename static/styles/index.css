@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;600&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Mukta', sans-serif;
   margin: 0;
@@ -26,6 +30,18 @@ body {
 
   justify-content: center;
   align-items: center;
+}
+
+.column {
+  float: left;
+ }
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
 }
 
 #title {
@@ -77,7 +93,7 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  width: 70%;
+  width: 100%;
   text-align: center;
 }
 
@@ -99,7 +115,6 @@ tr:hover {
 #datatable {
   margin-bottom: 50px;
 }
-
 
 /* GLOBAL CLASSES */
 
